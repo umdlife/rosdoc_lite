@@ -1,6 +1,23 @@
 Change history
 ==============
 
+0.2.9 (2019-01-23)
+------------------
+* use yaml.safe_load for untrusted yaml input
+* Contributors: Dirk Thomas
+
+0.2.8 (2018-09-17)
+------------------
+* fix top bar on recent doxygen versions
+  * on recent doxygen topbar requires jquery
+  * fixes documentation generation on ROS melodic
+  * see https://www.stack.nl/~dimitri/doxygen/manual/changelog.html#log_1_8_1
+* add use_mdfile_as_mainpage option
+  This makes it possible/easier to use a markdown file as mainpage, e.g. the README.md
+* remove unsupported option latex_paper_size (`#79 <https://github.com/ros-infrastructure/rosdoc_lite/issues/79>`_)
+* Expose doxygen parameter GENERATE_QHP
+* Contributors: Dirk Thomas, Felix Ruess, Jack O'Quin, Jiri Horner, Levi Armstrong, Tully Foote
+
 0.2.7 (2017-06-02)
 ------------------
 * fix import (`#74 <https://github.com/ros-infrastructure/rosdoc_lite/issues/74>`_)

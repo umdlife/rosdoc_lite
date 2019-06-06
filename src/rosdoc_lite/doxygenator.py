@@ -106,7 +106,7 @@ def prepare_tagfiles(tagfile_spec, tagfile_dir, output_subfolder):
     """A function that will load a tagfile from either a URL or the filesystem"""
     tagfile_list = []
     with open(tagfile_spec) as f:
-        tagfile_list = yaml.load(f)
+        tagfile_list = yaml.safe_load(f)
     tagfile_string = ""
     tagfile_list = tagfile_list or [] # Avoid tagfile_list to be None.
     for tag_pair in tagfile_list:
