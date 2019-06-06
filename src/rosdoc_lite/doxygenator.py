@@ -108,6 +108,7 @@ def prepare_tagfiles(tagfile_spec, tagfile_dir, output_subfolder):
     with open(tagfile_spec) as f:
         tagfile_list = yaml.load(f)
     tagfile_string = ""
+    tagfile_list = tagfile_list or [] # Avoid tagfile_list to be None.
     for tag_pair in tagfile_list:
         print(tag_pair)
         if tag_pair['location'].find("http://") == 0:
